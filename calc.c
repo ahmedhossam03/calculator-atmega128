@@ -13,11 +13,11 @@ void disp_calc(uint8 key) //display input data
 		lcd_send_cmd(LCD_CLR);
 		_delay_ms(2);
 	}
-	else if(key > 9 || key == '0') //display numbers from 0-9 
+	else if(key > 9 || key == '0') //display operations and 0
 	{
 		lcd_send_char(key);
 	}
-	else if(key <= 9) //display operations +-*/
+	else if(key <= 9) //display numbers
 	{
 		lcd_send_char(key + '0');
 	}
